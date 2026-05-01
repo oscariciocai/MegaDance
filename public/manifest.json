@@ -1,0 +1,31 @@
+{
+  "id": "megadance-radio",
+  "name": "Mega Dance Radio",
+  "short_name": "Mega Dance",
+  "description": "Tu stream de música exclusivo.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050505",
+  "theme_color": "#ff00ff",
+  "icons": [
+    {
+      "src": "https://megadance.com.ar/img/Icono.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://megadance.com.ar/img/Icono.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "https://megadance.com.ar/img/Icono.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
