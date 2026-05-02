@@ -14,13 +14,7 @@
       "src": "https://megadance.com.ar/img/Icono.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
-    },
-    {
-      "src": "https://megadance.com.ar/img/Icono.png",
-      "sizes": "192x192",
-      "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     },
     {
       "src": "https://megadance.com.ar/img/Icono.png",

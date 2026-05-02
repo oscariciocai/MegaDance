@@ -350,16 +350,24 @@ export default function App() {
           </div>
           
           <AnimatePresence>
-            {deferredPrompt && (
+            {(deferredPrompt || isInIframe || isIOS) && (
               <motion.button
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
-                onClick={handleInstallClick}
+                onClick={() => {
+                  if (isInIframe) {
+                    alert("Para instalar, por favor abre la aplicación en una pestaña nueva usando el botón en la parte superior derecha del visor.");
+                  } else if (isIOS) {
+                    alert("Para instalar en iOS: Pulsa 'Compartir' en Safari y pulsa 'Añadir a la pantalla de inicio'.");
+                  } else {
+                    handleInstallClick();
+                  }
+                }}
                 className="flex items-center gap-2 px-3 py-1.5 bg-mega-pink/20 hover:bg-mega-pink/30 border border-mega-pink/30 rounded-full text-[10px] font-black uppercase tracking-widest text-white transition-all neon-glow"
               >
                 <Download className="w-3.5 h-3.5" />
-                Instalar Ahora
+                {isInIframe ? "Instalación (Info)" : isIOS ? "Instalar App" : "Instalar Ahora"}
               </motion.button>
             )}
           </AnimatePresence>
